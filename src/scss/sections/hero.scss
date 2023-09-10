@@ -1,0 +1,73 @@
+.hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero__wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  position: relative;
+  min-height: 600px;
+}
+
+.hero__text-wrapper {
+color: $primary2;
+
+  h1 {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: $white;
+  }
+
+  p {
+    color: #fefefe;
+    font-size: 14px;
+  }
+}
+
+.hero__btn {
+  display: flex;
+  margin: 0 -5px;
+  margin-top: 25px;
+  
+  a {
+  margin: 5px;
+  text-align: center;
+  width: 165px;
+  }
+  
+  .btn1 {
+    @include btn($color-cerulean, $white, 10px, 15px, 0);
+  }
+}
+
+.hero__background-wrapper {
+  position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    z-index: -1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to right, rgba($color: #252525, $alpha:0.9), rgba($color: #252525, $alpha:0.7));
+    }
+  }
